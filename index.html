@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Smarix | Courses Website</title>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html" class="logo">
+            <img src="media/smarix.png" alt="smarix logo">
+            <span>Smarix</span>
+        </a>
+        <ul class="menu_ul">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+        </ul>
+        <ion-icon class="open" name="menu-outline" onclick="menu()"></ion-icon>
+        <ion-icon class="close" name="close-outline" onclick="menu()"></ion-icon>
+    </div>
+    <div class="content">
+        <div class="header" id="home">
+            <div class="cover"></div>
+            <h1>The Best Programming Courses</h1>
+            <a href="">Learn More</a>
+        </div>
+        <div class="about" id="about">
+            <img src="media/team.png" alt="team image">
+            <div class="about-content">
+                <h2>Who we are...</h2>
+                <p>We are a programming related company that interest in all programming fields and has two departments The Courses and Projects departments</p>
+                <a href="register/signin.html">Sign in now</a>
+            </div>
+        </div>
+        <div class="courses" id="courses">
+            <div class="course web-course">
+                <img src="media/web.png" alt="web course image">
+                <div>
+                    <h3>Web Course</h3>
+                    <p>By the end of the course you will be able to create a full stack web app that have a good UI & UX design and have a good structured database and server working.</p>
+                    <a href="webcourse/index.html">Learn More</a>
+                </div>
+            </div>
+            <div class="course mobile-course">
+                <img src="media/mobile.png" alt="mobile course image">
+                <div>
+                    <h3>Mobile Course</h3>
+                    <p>By the end of the course you will be able to create a full stack mobile app that have a good UI & UX design and have a good structured database working.</p>
+                    <a href="mobilecourse/index.html">Learn More</a>
+                </div>
+            </div>
+            <div class="course desktop-course">
+                <img src="media/desktop.png" alt="desktop course image">
+                <div>
+                    <h3>Desktop Course</h3>
+                    <p>By the end of the course you will be able to create a full stack desktop app that have a good GUI design and have a good structured database.</p>
+                    <a href="desktopcourse/index.html">Learn More</a>
+                </div>
+            </div>
+            <div class="course ai-course">
+                <img src="media/ai.png" alt="ai course image">
+                <div>
+                    <h3>AI Course</h3>
+                    <p>By the end of the course you will be able to create an AI module that works on any app (web, mobile, desktop) and run some awesome ai tricks.</p>
+                    <a href="aicourse/index.html">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="feedbacks">
+            <h2>Students Feedback</h2>
+            <div class="feedback">
+                <img src="media/std1.jpg" alt="Student">
+                <h4>username 1</h4>
+                <p>"This website provide a great courses and prepaired you to the market directly"</p>
+            </div>
+            <div class="feedback">
+                <img src="media/std2.jpg" alt="Student">
+                <h4>username 2</h4>
+                <p>"This website provide a great courses and prepaired you to the market directly"</p>
+            </div>
+            <div class="feedback">
+                <img src="media/std3.jpg" alt="Student">
+                <h4>username 3</h4>
+                <p>"This website provide a great courses and prepaired you to the market directly"</p>
+            </div>
+        </div>
+        <div class="footer" id="contacts">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <ion-icon name="logo-twitter"></ion-icon>
+            <ion-icon name="logo-youtube"></ion-icon>
+            <ion-icon name="logo-instagram"></ion-icon>
+            <ion-icon name="logo-github"></ion-icon>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

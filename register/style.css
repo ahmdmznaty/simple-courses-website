@@ -1,0 +1,149 @@
+
+/* resetting default styles to my styles */
+/* COLOR THEME: [  0A72C6  |  00AB8B  |  FFE46C  |  F9F7F3  ] */
+html{scroll-behavior: smooth;}
+body{
+    margin: 0; padding: 0;
+    background-color: #F9F7F3;
+}
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    color: inherit;
+    font-family: sans-serif;
+    user-select: none;
+}
+input:focus{
+    outline: 0px; opacity: 0.9;
+}
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ___________ styling the navigation bar ___________ */
+.nav{
+    width: 100%; height: 70px;
+    background-color: #0A72C6; color: white;
+    position: fixed; top: 0px; left: 0px;
+    padding: 0px 50px;
+    z-index: 9999999999999;
+}
+.nav, .nav .logo, .nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+.nav ul{width: 50%; height: 100%; min-width: 200px;}
+.nav .logo img{width: 40px;}
+.nav .logo span{
+    font-size: 28px; font-weight: bold;
+    letter-spacing: 2px;
+    position: relative; left: 10px;
+}
+.nav ul li, .nav ul li a{
+    display: block; height: 100%;
+    display: flex; flex-grow: 1;
+    justify-content: center; align-items: center;
+    transition: background-color 0.2s;
+}
+.nav ul li a:hover{background-color: #2894ec;}
+.nav .open{display: none;}
+.nav .close{display: none;}
+@media screen and (max-width: 730px){
+    .nav{padding: 0 20px;}
+    .nav .open{display: block; font-size: 30px; cursor: pointer; transition: transform 0.3s;}
+    .nav .open:hover{transform: scale(1.1);}
+    .nav .close{
+        display: none;
+        position: relative;
+        z-index: 11;
+        font-size: 30px;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+    .nav .close:hover{transform: scale(1.1);}
+    .nav ul{
+        position: fixed; right: 0px; top: 0px;
+        background-color: #0A72C6;
+        height: calc(70px * 5);
+        width: 70%; z-index: 10;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        box-shadow: -2px 0 18px 0 rgba(0, 0, 0, 0.432);
+    }
+    .nav ul li, .nav ul li a{
+        height: 70px; width: 100%;
+        margin: 0; padding: 0;
+        flex-grow: 0;
+        border-top: 1px solid #0d69b4;
+    }
+
+}
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ___________ styling the header section ___________ */
+.content{
+    width: 100%; height: 100%;
+    position: fixed; top: 70px; left: 0px;
+    padding: 0 0 140px 0px;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+}
+.content>img{
+    width: 130px
+}
+.content>*{
+    margin: 8px;
+}
+.content .input{
+    width: 340px; height: 60px;
+    border-radius: 6px;
+    position: relative;
+    border: 1px solid grey;
+}
+.content .input input{
+    width: 100%; height: 100%;
+    background-color: transparent;
+    position: absolute; top: 0px; left: 0px;
+    border: 0px;
+    line-height: 60px;
+}
+.content .input label{
+    display: inline-block;
+    font-size: 20px; color: grey;
+    position: absolute;
+    left: 6%; top: 50%;
+    transform: translate(0%, -50%);
+    transition: all 0.3s;
+    cursor: text;
+}
+.content .input input:focus + label{
+    padding: 2px;
+    background-color: #F9F7F3;
+    left: 3%; top: -4%;
+}
+.content>input{
+    width: 340px; height: 60px;
+    border-radius: 6px;
+    background-color: #0A72C6;
+    border: 0px; color: white;
+    font-size: 22px; cursor: pointer;
+    transition: all 0.2s;
+}
+.content>input:hover{
+    color: #0A72C6;
+    background-color: white;
+    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.1);
+}
+.content a{
+    color: rgb(39, 39, 39);
+    text-decoration: underline 1px solid grey;
+}

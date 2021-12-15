@@ -1,0 +1,331 @@
+
+/* resetting default styles to my styles */
+/* COLOR THEME: [  0A72C6  |  00AB8B  |  FFE46C  |  F9F7F3  ] */
+html{scroll-behavior: smooth;}
+body{
+    margin: 0; padding: 0;
+    background-color: #F9F7F3;
+}
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    color: inherit;
+    font-family: sans-serif;
+    user-select: none;
+}
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ___________ styling the navigation bar ___________ */
+.nav{
+    width: 100%; height: 70px;
+    background-color: #0A72C6; color: white;
+    position: fixed; top: 0px; left: 0px;
+    padding: 0px 50px;
+    z-index: 9999999999999;
+}
+.nav, .nav .logo, .nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+.nav ul{width: 50%; height: 100%; min-width: 200px;}
+.nav .logo img{width: 40px;}
+.nav .logo span{
+    font-size: 28px; font-weight: bold;
+    letter-spacing: 2px;
+    position: relative; left: 10px;
+}
+.nav ul li, .nav ul li a{
+    display: block; height: 100%;
+    display: flex; flex-grow: 1;
+    justify-content: center; align-items: center;
+    transition: background-color 0.2s;
+}
+.nav ul li a:hover{background-color: #2894ec;}
+.nav .open{display: none;}
+.nav .close{display: none;}
+@media screen and (max-width: 730px){
+    .nav{padding: 0 20px;}
+    .nav .open{display: block; font-size: 30px; cursor: pointer; transition: transform 0.3s;}
+    .nav .open:hover{transform: scale(1.1);}
+    .nav .close{
+        display: none;
+        position: relative;
+        z-index: 11;
+        font-size: 30px;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+    .nav .close:hover{transform: scale(1.1);}
+    .nav ul{
+        position: fixed; right: 0px; top: 0px;
+        background-color: #0A72C6;
+        height: calc(70px * 5);
+        width: 70%; z-index: 10;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        box-shadow: -2px 0 18px 0 rgba(0, 0, 0, 0.432);
+    }
+    .nav ul li, .nav ul li a{
+        height: 70px; width: 100%;
+        margin: 0; padding: 0;
+        flex-grow: 0;
+        border-top: 1px solid #0d69b4;
+    }
+
+}
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ___________ styling the header section ___________ */
+.content{
+    width: 100%;
+    position: relative;
+    top: 70px;
+}
+.content .header{
+    width: 100%; height: 300px;
+    background-image: url(media/cover.jpeg);
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    z-index: 1; position: relative;
+}
+.content .header .cover{
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.767);
+    position: absolute; top: 0; left: 0;
+    z-index: 2;
+}
+.content .header h1{
+    color: white;
+    text-align: center;
+    line-height: normal;
+    padding-top: 110px;
+    font-size: 35px;
+    position: relative;
+    z-index: 3;
+}
+@media screen and (max-width:500px){
+    .content .header{ height: 340px; }
+    .content .header h1{
+        font-size: 30px;
+        padding-top: 30px 10px;
+    }
+}
+.content .header a{
+    display: block;
+    width: 220px; height: 50px;
+    background-color: #0A72C6; color: white;
+    text-align: center; line-height: 50px;
+    font-size: 20px; margin: 30px auto;
+    position: relative; z-index: 3;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+.content .header a:hover{
+    color: #0A72C6; background-color: white;
+}
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ___________ styling the about section ___________ */
+.content .about{
+    width: 100%; height: auto;
+    padding: 8px 0;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: calc();
+}
+.content .about>div{
+    width: 40%; min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 50px 0px;
+}
+@media screen and (max-width:500px){
+    .content .about-content{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.content .about>img{
+    width: 30%;
+    min-width: 280px;
+    max-width: 380px;
+}
+.content .about div h2{margin: 10px 0;}
+.content .about div a{
+    display: block;
+    width: 220px; height: 50px;
+    background-color: #0A72C6; color: white;
+    text-align: center; line-height: 50px;
+    font-size: 20px; margin: 10px 0;
+    position: relative; z-index: 3;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+.content .about div a:hover{
+    color: #0A72C6; background-color: white;
+    box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.192);
+}
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ___________ styling the courses section ___________ */
+.content .courses{
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content .courses .course{
+    width: 95%;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    background-color: #FFE46C;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.content .courses .mobile-course{
+    flex-direction: row;
+}
+.content .courses .ai-course{
+    flex-direction: row;
+}
+.content .courses .course div{
+    width: 45%;
+}
+.content .courses .course img{
+    width: 30%; min-width: 260px;
+}
+.content .courses .course div h3{
+    line-height: 50px;
+    font-size: 30px;
+}
+.content .courses .course div p{
+    font-size: 20px;
+    padding: 5px 0 10px 0;
+}
+.content .courses .course a{
+    display: block;
+    width: 220px; height: 50px;
+    background-color: #0A72C6; color: white;
+    text-align: center; line-height: 50px;
+    font-size: 20px; margin: 10px 0;
+    position: relative; z-index: 3;
+    border-radius: 25px; cursor: pointer;
+    transition: all 0.3s;
+}
+.content .courses .course a:hover{
+    color: #0A72C6; background-color: white;
+    box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.192);
+}
+@media screen and (max-width:500px){
+    .content .courses .course div{
+        width: 80%;
+    }
+    .content .courses .course div h3, .content .courses .course div p{
+        text-align: center;
+    }
+    .content .courses .course div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ___________ styling the feedbacks section ___________ */
+.content .feedbacks{
+    width: 100%; padding: 10px 0 40px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.content .feedbacks .feedback{
+    width: 260px; height: 300px;
+    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.123);
+    border-radius: 3px; padding: 20px;
+    text-align: center; margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.content .feedbacks h2{
+    width: 100%; text-align: center; padding: 0 0 30px 0; font-size: 30px;
+}
+.content .feedbacks .feedback img{
+    width: 180px; border-radius: 50%;
+    border: 8px solid #FFE46C;
+}
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------ */
+
+/* ___________ styling the footer section ___________ */
+.footer{
+    width: 100%;
+    padding: 30px;
+    background-color: #0A72C6;
+    text-align: center;
+    font-size: 30px;
+    color: #F9F7F3;
+}
+.footer ion-icon{
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.footer ion-icon:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
