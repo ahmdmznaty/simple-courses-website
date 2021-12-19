@@ -105,6 +105,7 @@ input:focus{
 }
 .content .input{
     width: 340px; height: 60px;
+    min-height: 60px;
     border-radius: 6px;
     position: relative;
     border: 1px solid grey;
@@ -113,7 +114,8 @@ input:focus{
     width: 100%; height: 100%;
     background-color: transparent;
     position: absolute; top: 0px; left: 0px;
-    border: 0px;
+    border: 0px; padding-left: 10px;
+    font-size: 18px;
     line-height: 60px;
 }
 .content .input label{
@@ -126,6 +128,11 @@ input:focus{
     cursor: text;
 }
 .content .input input:focus + label{
+    padding: 2px;
+    background-color: #F9F7F3;
+    left: 3%; top: -4%;
+}
+.content .input input:valid + label{
     padding: 2px;
     background-color: #F9F7F3;
     left: 3%; top: -4%;

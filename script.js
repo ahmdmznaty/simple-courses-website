@@ -7,8 +7,9 @@ let ul = document.querySelector(".menu_ul")
 let open = document.querySelector(".open")
 let close = document.querySelector(".close")
 
-ul.style.display = "flex"
-if(window.innerWidth < 730){ul.style.display = "none"}
+
+if(window.innerWidth > 730){ul.style.display = "flex"}
+else if(window.innerWidth < 730){ul.style.display = "none"}
 
 let menu = () => {
     if(window.innerWidth < 730){
