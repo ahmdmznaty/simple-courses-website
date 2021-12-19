@@ -139,7 +139,7 @@ input:focus{
 }
 .content>input{
     width: 340px; height: 60px;
-    border-radius: 6px;
+    border-radius: 6px; min-height: 60px;
     background-color: #0A72C6;
     border: 0px; color: white;
     font-size: 22px; cursor: pointer;
